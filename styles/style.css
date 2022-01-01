@@ -1,0 +1,41 @@
+.mall {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+
+.store {
+    display: inherit;
+    margin: inherit;
+    padding: inherit;
+}
+
+.anchor-store {
+    display: inherit;
+    margin: inherit;
+    padding: inherit;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+
+.build-store {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+.build-anchor-store {
+    display: inherit;
+    margin: inherit;
+    padding: inherit;
+    width: inherit;
+}
+
+.build-secondary-store {
+    display: inherit;
+    margin: inherit;
+    padding: inherit;
+    width: inherit;
+}

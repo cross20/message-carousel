@@ -1,26 +1,19 @@
-/** A set of elements that change position. */ 
-const carousel = document.querySelector('.carousel');
+const mall = document.querySelector('.mall');
 
-// Retrieve form div to access its children.
-const form = document.querySelector('.form');
+/** Adds event listeners to all buttons used to build the mall */
+function addMallActions() {
+    const buildStore = document.querySelector('.build-store');
+    const buildAnchorStore = buildStore.querySelector('.build-anchor-store');
+    buildAnchorStore.addEventListener('click', () => {
+        const anchorStore = document.createElement('div');
+        anchorStore.className = 'anchor-store';
 
-// Add event listener to submit button to add new paragraphs to the carousel.
-const submit = form.querySelector('button');
-submit.addEventListener('click', () => {
-    // Get input element to retrieve its value.
-    const input = form.querySelector('input');
+        const storeFront = document.createElement('p');
+        storeFront.textContent = 'This is an anchor store';
 
-    // Do not append empty paragraph elements.
-    if (input.value.trim() !== '') {
-        // Create new paragraph to append to the carousel.
-        const newParagraph = document.createElement('p');
-        newParagraph.textContent = input.value.trim();
-    
-        // Append new paragraph to carousel.
-        carousel.appendChild(newParagraph);
-    }
-    
-    // Reset the input.
-    input.value = '';
-    input.focus();
-});
+        anchorStore.appendChild(storeFront);
+        mall.appendChild(anchorStore);
+    });
+}
+
+addMallActions();
